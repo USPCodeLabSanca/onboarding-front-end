@@ -1,0 +1,19 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#caixa{
+    width: 30vw;
+}
+
+#logo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:coral;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
