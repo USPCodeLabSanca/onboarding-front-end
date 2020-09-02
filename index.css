@@ -9,6 +9,7 @@ body{
 
 #caixa{
     width: 30vw;
+    margin-right: 5px;
 }
 
 #logo{
@@ -16,4 +17,9 @@ body{
     color:coral;
     font-size: 40px;
     margin-bottom: 20px;
+}
+
+#resultados{
+    background-color: blue;
+    margin: 30px;
 }
