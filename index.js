@@ -1,16 +1,19 @@
 const form = document.getElementById('search-form');
 
-form.addEventListener('submit', event => {
-    event.preventDefault();
+/**
+ * Renders the recipes received by the backend
+ * @typedef { {id: string, name: string, recipe: string[], url: string} } Recipe
+ * @argument { Recipe[] } recipes */
+function displayRecipes(recipes) {
+    // Clara goes here
+}
 
-    let ingredientes = event.target.ingredientes.value;
-
-    if (ingredientes.indexOf(',') != -1)
-        ingredientes = ingredientes.replace(/,/g, ' ');
-
-    ingredientes = ingredientes.split(/\s+/g);
-    console.log(ingredientes);
-
+/**
+ * Requests matching recipes from the server. If `ingredientes` is an empty array,
+ * returns all recipes.
+ * @argument { string[] } ingredientes
+ */
+function requestRecipes(ingredientes) {
     const promise = fetch('http://localhost:8000/?ingredientes=' + ingredientes.join(','));
 
     promise.then((response) => {
@@ -18,12 +21,14 @@ form.addEventListener('submit', event => {
         return jsonPromise;
     }).then(jsonResponse => {
         console.log(jsonResponse);
+        displayRecipes(jsonResponse);
     });
-})
+}
 
-// http methods:
-// GET
-// POST
-// PUT
-// DELETE
-// OPTIONS
+form.addEventListener('submit', event => {
+    event.preventDefault();
+
+    let ingredientes = event.target.ingredientes.value;
+
+    requestRecipes(ingredientes.split(','));
+})
