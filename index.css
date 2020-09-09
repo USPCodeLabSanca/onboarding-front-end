@@ -7,14 +7,39 @@ body{
     align-items: center;
 }
 
-#caixa{
+#search-box{
     width: 30vw;
     margin-right: 5px;
+}
+
+#button{
+    cursor: pointer;
 }
 
 #logo{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:coral;
     font-size: 40px;
+    font-weight: bold;
     margin-bottom: 20px;
+}
+
+#results{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flood-color: coral;
+    
+}
+.title{
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    color: coral;
+}
+
+.ingredients{
+    font-size: 18px;
+}
+
+.url{
+    font-size: 18px;
 }
