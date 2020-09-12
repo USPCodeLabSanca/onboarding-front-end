@@ -6,6 +6,7 @@ const form = document.getElementById("search-form");
  * @argument { Recipe[] } recipes */
 function displayRecipes(recipes) {
 
+    document.getElementById("results").innerHTML = '';
     recipes.forEach((element) => {
 
         var temp = document.createElement("div");
