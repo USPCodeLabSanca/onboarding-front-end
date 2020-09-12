@@ -2,22 +2,23 @@ const form = document.getElementById("search-form");
 
 /**
  * Renders the recipes received by the backend
- * @typedef { {id: string, name: string, recipe: string[], url: string} } Recipe
+ * @typedef { {id_: string, recipe: string[], url: string} } Recipe
  * @argument { Recipe[] } recipes */
 function displayRecipes(recipes) {
-   
+
     recipes.forEach((element) => {
 
         var temp = document.createElement("div");
-        
+
         var title = document.createElement("p");
-        title.innerHTML += element.name;
+        const name = element.id_.replace(/-/g, ' ');
+        title.innerHTML += name;
         title.classList.add("title");
-        
+
         var ingredients = document.createElement("p");
         ingredients.innerHTML += "Ingredientes:<br><br>"+element.recipe+"<br>";
         ingredients.classList.add("ingredients");
-                
+
         var url = document.createElement("p");
         url.innerHTML += "Fonte: " + "<a href='"+element.url+"'>Tudo Gostoso</a>"
         url.classList.add("url");
