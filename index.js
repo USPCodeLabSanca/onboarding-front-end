@@ -1,5 +1,7 @@
 const form = document.getElementById("search-form");
 
+const BaseRecipeURL = 'https://www.tudogostoso.com.br/busca?q=';
+
 /**
  * Renders the recipes received by the backend
  * @typedef { {id_: string, recipe: string[], url: string} } Recipe
@@ -21,7 +23,7 @@ function displayRecipes(recipes) {
         ingredients.classList.add("ingredients");
 
         var url = document.createElement("p");
-        url.innerHTML += "Fonte: " + "<a href='"+element.url+"'>Tudo Gostoso</a>"
+        url.innerHTML += "Fonte: " + "<a href='"+BaseRecipeURL + element.id_+"' rel='noreferrer noopener'>Tudo Gostoso</a>"
         url.classList.add("url");
 
         temp.appendChild(title);
