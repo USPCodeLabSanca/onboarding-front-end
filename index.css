@@ -1,6 +1,6 @@
 body{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,7 +27,6 @@ body{
 #results{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     flood-color: coral;
-    
 }
 .title{
     margin-top: 25px;
