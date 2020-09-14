@@ -40,7 +40,7 @@ function displayRecipes(recipes) {
  */
 function requestRecipes(ingredientes) {
   const promise = fetch(
-    "http://localhost:8000/?ingredientes=" + ingredientes.join(",")
+    "/.netlify/functions/recipes?ingredientes=" + ingredientes.join(",")
   );
 
   promise
